@@ -18,6 +18,18 @@ cargo install --target=aarch64-apple-darwin diesel_cli --no-default-features --f
 docker compose up
 ```
 
+## building
+
+```bash
+cargo run --target=aarch64-apple-darwin --bin show_websites
+```
+
+## running
+
+```bash
+./target/aarch64-apple-darwin/debug/show_websites
+```
+
 ## debugging
 
 ```bash
