@@ -1,4 +1,4 @@
-# rust_learn
+# rust_diesel
 
 ## setup
 
