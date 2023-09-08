@@ -15,6 +15,6 @@ fn main() {
 
   println!("Displaying {} websites", results.len());
   for website in results {
-    println!("{}", website.hostname);
+    println!("website: {}, scraped: {}, created_at: {}", website.hostname, website.scraped, website.created_at);
   }
 }
