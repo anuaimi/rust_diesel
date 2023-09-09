@@ -1,3 +1,4 @@
+use crate::schema::websites;
 use diesel::prelude::*;
 // use chrono::prelude::*;
 use chrono::{DateTime, Utc};
@@ -11,6 +12,12 @@ pub struct Website {
   pub scraped: bool,
   pub created_at: DateTime<Utc>,
   pub updated_at: DateTime<Utc>,
+}
+
+#[derive(Insertable)]
+#[diesel[table_name = websites]]
+pub struct NewWebsite<'a> {
+  pub hostname: &'a String,
 }
 
 #[derive(Queryable, Selectable)]
