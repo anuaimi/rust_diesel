@@ -1,0 +1,70 @@
+[
+  {
+    "url" : "https://discoverdiscomfort.com/cairo-zabbaleen-garbage-collection/",
+    "title" : "The Zabbaleen: The Unique Story of the `Garbage People` of Cairo",
+    "hero_image" : "https://discoverdiscomfort.com/wp-content/uploads/2019/04/Zabaleen-moqattam-1-1024x683.jpg",
+    "tags" : [
+      "egypt", "cairo", "mokattam", "zabbaleen"
+    ]
+  },
+  {
+    "url" : "https://discoverdiscomfort.com/best-places-to-visit-in-cairo/",
+    "title" : "10 Best Places to Visit in Cairo",
+    "hero_image" : "https://discoverdiscomfort.com/wp-content/uploads/2019/02/Best-places-to-visit-in-Cairo-Egypt-pyramids-ahram.jpg",
+    "tags" : ["cairo", "egypt"]
+  },
+  {
+    "url" : "https://discoverdiscomfort.com/cairo-neighborhood-guide/",
+    "title" : "Where to Stay in Cairo for Local Life",
+    "hero_image" : "https://discoverdiscomfort.com/wp-content/uploads/2019/01/living-in-cairo-egypt-pyramids-above-cairo-larger-1024x682.jpeg",
+    "tags" : ["cairo", "egypt", "neighbourhoods"]
+  }, 
+  {
+    "url" : "https://discoverdiscomfort.com/best-local-foods-eat-cairo-egypt/", 
+    "title" : "The Best Local Foods to Eat in Egypt", 
+    "hero_image" : "https://discoverdiscomfort.com/wp-content/uploads/2019/07/DD-Best-Foods-to-East-in-Cairo-for-Local-Experience-Molokhiyya-1024x672.jpg",
+    "tags" : [ "egypt", "cairo", "food"]
+  },
+  {
+    "url" : "https://jetsettimes.com/countries/egypt/cairo/cairo-planner/10-amazing-must-sees-in-cairo/",
+    "title" : "10 Amazing Must-See’s In Cairo",
+    "hero_image" : "https://jetsettimes.com/wp-content/uploads/2020/07/Sphinx-Giza.-UNSPLASH-Lea-Kobal.jpeg",
+    "tags" : [ "cairo", "eygpt"]
+  },
+  {
+    "url" : "https://jetsettimes.com/countries/egypt/cairo/cairo-planner/neighborhood-breakdown-the-5-main-districts-of-cairo/",
+    "title" : "Neighborhood Breakdown: The 5 Main Districts Of Cairo",
+    "hero_image" : "https://jetsettimes.com/wp-content/uploads/2020/09/El-Gouna.-UNSPLASH-Levi-Morsy-.jpeg",
+    "tags" : [ "cairo", "eygpt"]
+  }, 
+  {
+    "url" : "https://jetsettimes.com/countries/egypt/cairo/cairo-planner/5-restaurants-you-must-go-to-in-cairo/",
+    "title" : "5 Restaurants You Must Go To In Cairo",
+    "hero_image" : "https://jetsettimes.com/wp-content/uploads/2020/08/Zooba.jpg",
+    "tags" : [ "cairo", "eygpt", "food"]
+  },
+  {
+    "url" : "https://vanillapapers.net/2020/03/14/hidden-gems-in-cairo/",
+    "title" : "12 Must-See Hidden Gems in Cairo (A Local's Guide)", 
+    "hero_image" : "https://vanillapapers.net/wp-content/uploads/2020/03/gems-featured.jpg",
+    "tags" : [ "cairo", "eygpt", "sites"]
+  }, 
+  {
+    "url" : "https://vanillapapers.net/2018/07/08/visiting-giza-pyramids-travel-guide-tips/",
+    "title" : "An Ultimate Local's Guide To The Giza Pyramids",
+    "hero_image" : "https://vanillapapers.net/wp-content/uploads/2018/07/finals.jpg", 
+    "tags" : ["cairo", "egypt"]
+  }, 
+  {
+    "hero_image" : "https://vanillapapers.net/wp-content/uploads/2019/10/IMG-20190305-WA0034.jpg",
+    "url" : "https://vanillapapers.net/2019/10/28/islamic-cairo/",
+    "title" : "14 Must-See Hidden Gems In Islamic Cairo",
+    "tags" : [ "cairo", "egypt"]
+  }, 
+  {
+    "url" : "https://vanillapapers.net/2020/02/10/where-to-stay-in-cairo/", 
+    "title" : "Where To Stay In Cairo (An Ultimate Local's Guide)",
+    "hero_image" : "https://vanillapapers.net/wp-content/uploads/2020/02/stay-cairo.jpg",
+    "tags" : ["cairo", "egypt"]
+  }
+]
