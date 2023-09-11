@@ -11,7 +11,7 @@ use std::io::Error;
 struct BookmarkJson {
     url: String,
     title: Option<String>,
-    // tags: 
+    tags: Option<Vec<String>>,
 }
 
 // get all files in a given directory
@@ -45,7 +45,7 @@ fn main() {
         let bookmarks: Vec<BookmarkJson> = serde_json::from_reader(file).expect("Failed to parse JSON");
     
         for bookmark in bookmarks.iter() {
-          println!("  {}: {:?}", bookmark.url, bookmark.title);
+          println!("  {}: {:?} {:?}", bookmark.url, bookmark.title, bookmark.tags);
         }
     
       }      
