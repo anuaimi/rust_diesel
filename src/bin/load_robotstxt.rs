@@ -2,6 +2,7 @@
 // use texting_robots::{Robot, get_robots_url};
 use reqwest;
 use std::error::Error;
+use std::env;
 use serde::Deserialize;
 use texting_robots::{Robot, get_robots_url};
 
@@ -29,31 +30,72 @@ struct Url {
   loc: String,
 }
 
+fn get_hostname() -> String {
+
+  let args: Vec<String> = env::args().collect();
+  if (args.len() == 1) || (args.len() > 2) {
+    panic!{"usage: load_robotstxt hostname"};
+  }
+  
+  let mut hostname = args[1].to_owned();
+  if !hostname.contains("://") {
+    hostname.insert_str( 0,"https://");
+  }
+
+  return hostname;
+}
+
 fn main() -> Result<(), Box<dyn Error>> {
 
-  let url = "https://lonelyplanet.com";
-  let robots_url = get_robots_url(url).unwrap();
-  // println!("robotstxt: : {}", robots_url);
+  let hostname = get_hostname();
 
-  // get the file
-  // CHECK FOR 404??
-  let body = reqwest::blocking::get(robots_url)?.text()?;
+  println!("loading robotstxt for: {}", hostname);
+  let robots_url = get_robots_url(&hostname).unwrap();
 
-  // println!("body = {}", body);
+  // get the robots.txt file
+  let response= reqwest::blocking::get(robots_url)?;
+  let status = response.status();
+  if !status.is_success() {
+    // no robots.txt or some sort of error
+    panic!("could not load robots.txt");
+  }
 
   // parse the robots.txt
+  let body = response.text()?;
   let r = Robot::new("travel", body.as_bytes()).unwrap();
 
   // get the list of sitemaps
-  println!("{}", r.sitemaps.len());
+  let mut sitemap_list = Vec::new();
+
+  if r.sitemaps.len() == 0 {
+
+    // we should just try the defaul /sitemap.xml
+    let sitemap_url = hostname + "/sitemap.xml";
+    let response = reqwest::blocking::get(&sitemap_url);
+    if response.is_err() {
+      panic!("no sitemaps listed in robots.txt");
+    }
+    // ok we found sitemap
+    sitemap_list.push(sitemap_url);
+  } else {
+    sitemap_list = r.sitemaps;
+  }
   // println!("{:?}", r.sitemaps);
 
-  for sitemap in r.sitemaps {
+  for sitemap in sitemap_list {
     println!("loading {}", sitemap);
 
     // load sitemap
     let file_text = reqwest::blocking::get(sitemap)?.text()?;
     
+    // is it xml? normally yes but possible just text file
+    if file_text.contains("xmlns") {
+
+    } else {
+      // might just be text
+      panic!("sitemap is just text file - not currently supported");
+    }
+
     // could be a siteindex or a sitemap
     if file_text.contains("sitemapindex") {
 
